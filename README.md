@@ -32,3 +32,4 @@ Covid Status, é um projeto que traz os dados de uma API pública, sobre o Covid
 # 📝 Licença
 
 Esse projeto foi desenvolvido por [Vinicius Lima](https://www.linkedin.com/in/marcos-vinicius-lima/)
+Link do Projeto [Covid Status](https://covid-status-api.netlify.app)
