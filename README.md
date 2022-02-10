@@ -4,7 +4,7 @@
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marcos-vinicius-lima/)](https://www.linkedin.com/in/marcos-vinicius-lima/)
 
 <h1 align="center">
-    <img alt="Dados do Covid" title="Projeto" src="https://github.com/ViniciusLima7/blindesvindros/blob/master/assets/img/capa.png" />
+    <img alt="Dados do Covid" title="Projeto" src="https://github.com/ViniciusLima7/covid-status.git/blob/master/assets/img/capa.png" />
 </h1>
 
 # 💻 Projeto
