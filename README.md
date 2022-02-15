@@ -4,12 +4,12 @@
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marcos-vinicius-lima/)](https://www.linkedin.com/in/marcos-vinicius-lima/)
 
 <h1 align="center">
-    <img alt="Dados HB" title="Projeto" src="https://github.com/ViniciusLima7/nelo-relatorios-hb/blob/master/assets/img/capa.png" />
+    <img alt="Dados do Covid" title="Projeto" src="https://github.com/ViniciusLima7/covid-status/blob/master/assets/img/capa.png" />
 </h1>
 
 # 💻 Projeto
 
-Nelo Relatórios, é um projeto que traz os dados semanais dos HBs Web, e monta gráficos para uma melhor visualização desses dados.
+Covid Status, é um projeto que traz os dados de uma API pública, sobre o Covid no Mundo, e monta gráficos para uma melhor visualização desses dados.
 
 ## 🛠 Tecnologias Usadas :heart_eyes:
 
@@ -34,4 +34,4 @@ Nelo Relatórios, é um projeto que traz os dados semanais dos HBs Web, e monta 
 Esse projeto foi desenvolvido por [Vinicius Lima](https://www.linkedin.com/in/marcos-vinicius-lima/)
 
 
-Link do Projeto [Nelo Relatórios](https://covid-status-api.netlify.app)
+Link do Projeto [Covid Status](https://covid-status-api.netlify.app)
