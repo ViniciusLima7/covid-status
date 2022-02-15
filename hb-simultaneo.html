@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Números de Covid por país</title>
+    <title>Números de Usuários Simultaneos Homebroker</title>
 
     <!-- Demo Dependencies -->
 
@@ -11,7 +11,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <link rel="shortcut icon" type="imagex/png" href="./assets/img/aba.png" />
+    <link
+      rel="shortcut icon"
+      type="imagex/png"
+      href="./assets/img/hb-title.jpg"
+    />
 
     <link
       rel="stylesheet"
@@ -27,26 +31,27 @@
           <ul class="navbar-nav nav main-nav">
             <li><a href="../index.html">Inicio</a></li>
             <!-- <li><a href="../country.html">País</a></li> -->
-            <li><a href="../hb.html">Pico Diario HB</a></li>
+            <li><a href="../hb-pico.html">Pico Diario HB</a></li>
+            <li><a href="../hb-simultaneo.html">Usuários Simultaneos HB</a></li>
           </ul>
         </div>
       </div>
     </div>
 
     <div>
-      <div class="container grid">
+      <!-- <div class="container grid">
         <div class="hero">
           <div class="chart-wrapper">
             <div class="chart-stage">
               <div>
-                <canvas id="linhasPico" width="300" height="100"></canvas>
+                <canvas id="linhasSimultaneo" width="300" height="100"></canvas>
               </div>
             </div>
           </div>
         </div>
       </div>
       <br />
-      <br />
+      <br /> -->
       <div>
         <div class="container grid">
           <div class="hero">
@@ -141,6 +146,6 @@
     </div>
 
     <!-- Project Analytics -->
-    <script src="/assets/js/hb.js"></script>
+    <script src="/assets/js/simultaneo.js"></script>
   </body>
 </html>
