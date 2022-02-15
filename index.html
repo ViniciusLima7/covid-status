@@ -26,47 +26,23 @@
           <ul class="navbar-nav nav main-nav">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../country.html">País</a></li>
+            <li><a href="../hb.html">HB</a></li>
           </ul>
         </div>
       </div>
     </div>
-
-    <div class="container grid grid-two-and-one">
-      <div class="chart-wrapper">
-        <div class="containerkpi wrapkpi">
-          <section class="itemkpi">
-            <h5>Total Confirmados</h5>
-            <p id="confirmed"></p>
-          </section>
-          <section class="itemkpi">
-            <h5>Total Mortes</h5>
-            <p id="death"></p>
-          </section>
-          <section class="itemkpi">
-            <h5>Total Recuperados</h5>
-            <p id="recovered"></p>
-          </section>
-        </div>
-        <div class="chart-notes" id="date">
-          Data de atualização:
-          <p id="dateapi"></p>
-        </div>
-      </div>
-      <div class="chart-wrapper">
-        <div class="chart-stage">
-          <canvas id="pizza" width="100" height="50"></canvas>
-          <!--Adicionar grafico-->
-        </div>
-      </div>
-      <div class="two">
+    <div class="container grid grid-hero-sidebar">
+      <div class="hero">
         <div class="chart-wrapper">
           <div class="chart-stage">
-            <!--Adicionar grafico-->
-            <canvas id="barras" width="300" height="100"></canvas>
+            <div>
+              <canvas id="linhasSimultaneo" width="300" height="100"></canvas>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <script src="/assets/js/index.js" defer></script>
   </body>
 </html>

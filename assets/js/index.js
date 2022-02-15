@@ -1,141 +1,85 @@
-//Url da API
-// let summary = "https://api.covid19api.com/summary";
-
-//Função imediata para ela se autoexecutar usando async await -  modo 1
 (async () => {
-  let summary = await axios.get("https://api.covid19api.com/summary");
+  let datas = await Promise.allSettled([
+    axios.get("http://127.0.0.1:5500/assets/data/simultaneoData.json"),
+  ]);
 
-  const global = summary.data.Global;
-  const paises = { ...summary.data.Countries };
-
-  //Chamar Metodos dos Graficos
-  gKpis(global);
-  gPizza(global);
-  gBarra(paises);
+  if (datas[0].status === "fulfilled") {
+    const data = datas[0].value.data;
+    carregargLinhasSimultaneo(data);
+  }
 })();
 
-//Formatar Valor com pontuação de Acordo com o Brasil
-function formaterValor(valor) {
-  return valor.toLocaleString("pt-br");
-}
+function carregargLinhasSimultaneo(json) {
+  let dates = _.map(json, "data");
+  let nuinvest = _.map(json, "nuinvest");
+  let rico = _.map(json, "rico");
+  let vitreo = _.map(json, "vitreo");
+  let geral = _.map(json, "geral");
+  let genial = _.map(json, "genial");
+  let warren = _.map(json, "warren");
+  let toro = _.map(json, "toro");
 
-//Pegar Dados da API com axios modo 2
-// function api() {
-//   axios
-//     .get(summary)
-//     .then((response) => {
-//       const global = response.data.Global;
-//       const paises = { ...response.data.Countries };
-
-//       gKpis(global);
-//       gPizza(global);
-//       gBarra(paises);
-
-//       // console.log(response);
-//       // console.log(paises);
-//     })
-//     .catch((error) => console.log(error));
-// }
-
-// api();
-
-function gPizza(global) {
-  //Metodo 1 para simplificar
-  let newcasosCovid = [
-    global.NewConfirmed,
-    global.NewDeaths,
-    global.newRecovered,
-  ];
-
-  //Metodo 2
-  // let newConfirmed = global.NewConfirmed;
-  // let newDeaths = global.NewDeaths;
-  // let newRecovered = global.NewRecovered;
-
-  const pizza = new Chart(document.getElementById("pizza"), {
-    type: "pie",
-    data: {
-      labels: ["Novos Confirmados", "Novas Mortes", "Novos Recuperados"],
-      datasets: [
-        {
-          label: "# of Votes",
-          data: newcasosCovid,
-          backgroundColor: [
-            "rgba(255, 110, 132, 0.7)",
-            "rgba(54, 162, 235, 0.9)",
-            "rgba(255, 206, 86, 0.2)",
-            // "rgba(75, 192, 192, 0.2)",
-            // "rgba(153, 102, 255, 0.2)",
-            // "rgba(255, 159, 64, 0.2)",
-          ],
-          borderColor: [
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            // "rgba(75, 192, 192, 1)",
-            // "rgba(153, 102, 255, 1)",
-            // "rgba(255, 159, 64, 1)",
-          ],
-          borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: "top",
-        },
-        title: {
-          display: true,
-          text: "Distribuição de Novos Casos de Covid",
-        },
-      },
-    },
-  });
-}
-
-function gBarra(paises) {
-  //Ordenar Dados por Numero de Mortes(Decrescente) e Nome(Crescente)
-  let paisesOrdenadosPorMorte = _.orderBy(
-    paises,
-    ["TotalDeaths", "Country"],
-    ["desc", "asc"]
-  );
-
-  //Pegar apenas os 10 primeiros da Array com slice a partir do indice 0 10 posições
-  let top10 = _.slice(paisesOrdenadosPorMorte, 0, 10);
-
-  //Map nos Nomes e nos Numeros de Mortes
-  let paisesMap = _.map(top10, "Country");
-  let mortesMap = _.map(top10, "TotalDeaths");
-
-  const barras = new Chart(document.getElementById("barras"), {
-    type: "bar",
+  linhas = new Chart(document.getElementById("linhasSimultaneo"), {
+    type: "line",
     data: {
       //Legendas
-      labels: paisesMap,
-
+      labels: dates,
+      //Dados em datasets pois podemos ter varias barras
       datasets: [
         {
-          label: "# Covid 19 ",
-          data: mortesMap,
-          backgroundColor: [
-            "rgba(255, 99, 132, 0.7)",
-            "rgba(54, 162, 235, 0.7)",
-            "rgba(255, 206, 86, 0.7)",
-            "rgba(75, 192, 192, 0.7)",
-            "rgba(153, 102, 255, 0.7)",
-            "rgba(255, 159, 64, 0.7)",
-          ],
-          borderColor: [
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(153, 102, 255, 1)",
-            "rgba(255, 159, 64, 1)",
-          ],
+          label: `NuInvest`,
+          //   label: `Número de `,
+          data: nuinvest,
+          backgroundColor: ["rgb(76, 6, 119)"],
+          borderColor: ["rgb(76, 6, 119)"],
+          borderWidth: 1,
+        },
+        {
+          label: `Rico`,
+          //   label: `Número de `,
+          data: rico,
+          backgroundColor: ["rgb(255, 82, 0)"],
+          borderColor: ["rgb(255, 82, 0)"],
+          borderWidth: 1,
+        },
+        {
+          label: `Vitreo`,
+          //   label: `Número de `,
+          data: vitreo,
+          backgroundColor: ["rgb(0, 66, 163)"],
+          borderColor: ["rgb(0, 66, 163)"],
+          borderWidth: 1,
+        },
+        {
+          label: `Geral`,
+          //   label: `Número de `,
+          data: geral,
+          backgroundColor: ["rgb(3, 102, 54)"],
+          borderColor: ["rgb(3, 102, 54)"],
+          borderWidth: 1,
+        },
+        {
+          label: `Genial`,
+          //   label: `Número de `,
+          data: genial,
+          backgroundColor: ["rgb(51, 135, 215)"],
+          borderColor: ["rgb(51, 135, 215)"],
+          borderWidth: 1,
+        },
+        {
+          label: `Warren`,
+          //   label: `Número de `,
+          data: warren,
+          backgroundColor: ["rgb(238, 61, 108)"],
+          borderColor: ["rgb(238, 61, 108)"],
+          borderWidth: 1,
+        },
+        {
+          label: `Toro`,
+          //   label: `Número de `,
+          data: toro,
+          backgroundColor: ["rgb(97, 49, 180)"],
+          borderColor: ["rgb(97, 49, 180)"],
           borderWidth: 1,
         },
       ],
@@ -144,31 +88,99 @@ function gBarra(paises) {
       responsive: true,
       plugins: {
         legend: {
-          position: "top",
+          position: "bottom",
         },
         title: {
           display: true,
-          text: "Total de Morte por País - Top 10",
+          text: "Usuários Simultaneos ",
+        },
+        layout: {
+          padding: {
+            left: 100,
+            right: 100,
+            top: 50,
+            bottom: 10,
+          },
         },
       },
     },
   });
 }
 
-function gKpis(global) {
-  document.getElementById("confirmed").innerHTML = formaterValor(
-    global.TotalConfirmed
-  );
+// function gBarra(paises) {
+//   //Ordenar Dados por Numero de Mortes(Decrescente) e Nome(Crescente)
+//   let paisesOrdenadosPorMorte = _.orderBy(
+//     paises,
+//     ["TotalDeaths", "Country"],
+//     ["desc", "asc"]
+//   );
 
-  document.getElementById("death").innerHTML = formaterValor(
-    global.TotalDeaths
-  );
+//   //Pegar apenas os 10 primeiros da Array com slice a partir do indice 0 10 posições
+//   let top10 = _.slice(paisesOrdenadosPorMorte, 0, 10);
 
-  document.getElementById("recovered").innerHTML = formaterValor(
-    global.TotalRecovered
-  );
+//   //Map nos Nomes e nos Numeros de Mortes
+//   let paisesMap = _.map(top10, "Country");
+//   let mortesMap = _.map(top10, "TotalDeaths");
 
-  document.getElementById("date").innerHTML = global.Date;
-}
+//   const barras = new Chart(document.getElementById("barras"), {
+//     type: "bar",
+//     data: {
+//       //Legendas
+//       labels: paisesMap,
+
+//       datasets: [
+//         {
+//           label: "# Covid 19 ",
+//           data: mortesMap,
+//           backgroundColor: [
+//             "rgba(255, 99, 132, 0.7)",
+//             "rgba(54, 162, 235, 0.7)",
+//             "rgba(255, 206, 86, 0.7)",
+//             "rgba(75, 192, 192, 0.7)",
+//             "rgba(153, 102, 255, 0.7)",
+//             "rgba(255, 159, 64, 0.7)",
+//           ],
+//           borderColor: [
+//             "rgba(255, 99, 132, 1)",
+//             "rgba(54, 162, 235, 1)",
+//             "rgba(255, 206, 86, 1)",
+//             "rgba(75, 192, 192, 1)",
+//             "rgba(153, 102, 255, 1)",
+//             "rgba(255, 159, 64, 1)",
+//           ],
+//           borderWidth: 1,
+//         },
+//       ],
+//     },
+//     options: {
+//       responsive: true,
+//       plugins: {
+//         legend: {
+//           position: "top",
+//         },
+//         title: {
+//           display: true,
+//           text: "Total de Morte por País - Top 10",
+//         },
+//       },
+//     },
+//   });
+// }
+
+// function gKpis(global) {
+//   document.getElementById("confirmed").innerHTML = formaterValor(
+//     global.TotalConfirmed
+//   );
+
+//   document.getElementById("death").innerHTML = formaterValor(
+//     global.TotalDeaths
+//   );
+
+//   document.getElementById("recovered").innerHTML = formaterValor(
+//     global.TotalRecovered
+//   );
+
+//   document.getElementById("date").innerHTML = global.Date;
+// }
 
 // export default { formaterValor };

@@ -1,0 +1,267 @@
+[
+  {
+    "data": "30-07-2021",
+    "nuinvest": 10779,
+    "rico": 27482,
+    "vitreo": 1050,
+    "geral": 60,
+    "genial": 1045,
+    "warren": 82
+  },
+  {
+    "data": "06-08-2021",
+    "nuinvest": 11281,
+    "rico": 29483,
+    "vitreo": 1088,
+    "geral": 54,
+    "genial": 1027,
+    "warren": 81
+  },
+  {
+    "data": "13-08-2021",
+    "nuinvest": 10723,
+    "rico": 27687,
+    "vitreo": 1010,
+    "geral": 59,
+    "genial": 848,
+    "warren": 69
+  },
+  {
+    "data": "20-08-2021",
+    "nuinvest": 11423,
+    "rico": 28216,
+    "vitreo": 1047,
+    "geral": 53,
+    "genial": 928,
+    "warren": 79
+  },
+  {
+    "data": "27-08-2021",
+    "nuinvest": 11743,
+    "rico": 26479,
+    "vitreo": 1068,
+    "geral": 53,
+    "genial": 991,
+    "warren": 118
+  },
+  {
+    "data": "03-09-2021",
+    "nuinvest": 10862,
+    "rico": 24727,
+    "vitreo": 991,
+    "geral": 55,
+    "genial": 1026,
+    "warren": 103
+  },
+  {
+    "data": "10-09-2021",
+    "nuinvest": 11148,
+    "rico": 24366,
+    "vitreo": 1019,
+    "geral": 50,
+    "genial": 917,
+    "warren": 122
+  },
+  {
+    "data": "17-09-2021",
+    "nuinvest": 10788,
+    "rico": 24827,
+    "vitreo": 920,
+    "geral": 53,
+    "genial": 980,
+    "warren": 120
+  },
+  {
+    "data": "24-09-2021",
+    "nuinvest": 11174,
+    "rico": 25227,
+    "vitreo": 1078,
+    "geral": 48,
+    "genial": 968,
+    "warren": 103
+  },
+  {
+    "data": "01-10-2021",
+    "nuinvest": 11172,
+    "rico": 22340,
+    "vitreo": 975,
+    "geral": 53,
+    "genial": 931,
+    "warren": 342
+  },
+  {
+    "data": "08-10-2021",
+    "nuinvest": 10930,
+    "rico": 23594,
+    "vitreo": 1032,
+    "geral": 56,
+    "genial": 1008,
+    "warren": 207
+  },
+  {
+    "data": "15-10-2021",
+    "nuinvest": 10232,
+    "rico": 21769,
+    "vitreo": 976,
+    "geral": 50,
+    "genial": 889,
+    "warren": 193
+  },
+  {
+    "data": "22-10-2021",
+    "nuinvest": 10989,
+    "rico": 24018,
+    "vitreo": 1186,
+    "geral": 53,
+    "genial": 1029,
+    "warren": 195
+  },
+  {
+    "data": "29-10-2021",
+    "nuinvest": 11018,
+    "rico": 23739,
+    "vitreo": 1046,
+    "geral": 53,
+    "genial": 994,
+    "warren": 227
+  },
+  {
+    "data": "05-11-2021",
+    "nuinvest": 10442,
+    "rico": 20640,
+    "vitreo": 950,
+    "geral": 49,
+    "genial": 906,
+    "warren": 180
+  },
+  {
+    "data": "12-11-2021",
+    "nuinvest": 11022,
+    "rico": 19646,
+    "vitreo": 880,
+    "geral": 47,
+    "genial": 850,
+    "warren": 182
+  },
+  {
+    "data": "19-11-2021",
+    "nuinvest": 10539,
+    "rico": 21005,
+    "vitreo": 886,
+    "geral": 44,
+    "genial": 839,
+    "warren": 186
+  },
+  {
+    "data": "26-11-2021",
+    "nuinvest": 9502,
+    "rico": 18839,
+    "vitreo": 803,
+    "geral": 46,
+    "genial": 819,
+    "warren": 193
+  },
+  {
+    "data": "03-12-2021",
+    "nuinvest": 9224,
+    "rico": 18239,
+    "vitreo": 785,
+    "geral": 48,
+    "genial": 1294,
+    "warren": 230
+  },
+  {
+    "data": "10-12-2021",
+    "nuinvest": 12002,
+    "rico": 19193,
+    "vitreo": 819,
+    "geral": 49,
+    "genial": 1320,
+    "warren": 216
+  },
+  {
+    "data": "13-12-2021",
+    "nuinvest": 11754,
+    "rico": 18667,
+    "vitreo": 852,
+    "geral": 49,
+    "genial": 1300,
+    "warren": 210
+  },
+  {
+    "data": "20-12-2021",
+    "nuinvest": 10271,
+    "rico": 17396,
+    "vitreo": 779,
+    "geral": 42,
+    "genial": 1406,
+    "warren": 181
+  },
+  {
+    "data": "27-12-2021",
+    "nuinvest": 8702,
+    "rico": 15271,
+    "vitreo": 713,
+    "geral": 41,
+    "genial": 1297,
+    "warren": 156
+  },
+  {
+    "data": "03-01-2022",
+    "nuinvest": 10072,
+    "rico": 18239,
+    "vitreo": 714,
+    "geral": 40,
+    "genial": 2426,
+    "warren": 175
+  },
+  {
+    "data": "10-01-2022",
+    "nuinvest": 9343,
+    "rico": 17321,
+    "vitreo": 734,
+    "geral": 41,
+    "genial": 2247,
+    "warren": 204
+  },
+  {
+    "data": "17-01-2022",
+    "nuinvest": 9737,
+    "rico": 17866,
+    "vitreo": 825,
+    "geral": 45,
+    "genial": 2328,
+    "warren": 210,
+    "toro": 792
+  },
+  {
+    "data": "24-01-2022",
+    "nuinvest": 10043,
+    "rico": 19464,
+    "vitreo": 937,
+    "geral": 45,
+    "genial": 2381,
+    "warren": 206,
+    "toro": 373
+  },
+  {
+    "data": "31-01-2022",
+    "nuinvest": 10098,
+    "rico": 20768,
+    "vitreo": 874,
+    "geral": 48,
+    "genial": 2594,
+    "warren": 226,
+    "toro": 420
+  },
+  {
+    "data": "07-02-2022",
+    "nuinvest": 10225,
+    "rico": 18255,
+    "vitreo": 958,
+    "geral": 42,
+    "genial": 2385,
+    "warren": 207,
+    "toro": 400
+  }
+]
