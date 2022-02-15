@@ -118,6 +118,7 @@ function carregargLinhasPico(json) {
     },
   });
 }
+
 function carregargLinhasPicoNuinvest(json) {
   let nuinvest = _.map(json, "nuinvest");
   let dates = _.map(json, "data");
