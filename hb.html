@@ -25,98 +25,120 @@
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-collapse">
           <ul class="navbar-nav nav main-nav">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../country.html">País</a></li>
-            <li><a href="../hb.html">HB</a></li>
+            <li><a href="../index.html">Inicio</a></li>
+            <!-- <li><a href="../country.html">País</a></li> -->
+            <li><a href="../hb.html">Pico Diario HB</a></li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="container grid grid-hero-sidebar">
-      <!-- <div class="sidebar"> -->
-        <!-- <div class="chart-wrapper">
-          <div class="chart-title">Filtro</div>
-          <div class="chart-stage">
-            <div>
-              <h3>Data início</h3>
-              <input
-                style="font-size: 20px"
-                type="date"
-                name="date_start"
-                id="date_start"
-                min="2020-01-01"
-              />
-              <h3>Data fim</h3>
-              <input
-                style="font-size: 20px"
-                type="date"
-                name="date_end"
-                id="date_end"
-                min="2020-01-01"
-              />
-              <h3>País</h3>
-              <select
-                style="font-size: 20px"
-                class="custom-select"
-                id="cmbCountry"
-              ></select>
-              <h3>Dados</h3>
-              <select
-                style="font-size: 20px"
-                class="custom-select"
-                id="cmbData"
-              >
-                <option value="Confirmed">Casos Confirmados</option>
-                <option value="Deaths" selected>Número de Óbitos</option>
-                <option value="Recovered">Recuperados</option>
-              </select>
-              <div></div>
-              <div class="btn">
-                <button style="font-size: 20px" type="submit" id="filtro">
-                  Aplicar
-                </button>
+    <div>
+      <div class="container grid">
+        <div class="hero">
+          <div class="chart-wrapper">
+            <div class="chart-stage">
+              <div>
+                <canvas id="linhasPico" width="300" height="100"></canvas>
               </div>
             </div>
           </div>
         </div>
-      </div> -->
-      <div class="hero">
-        <div class="chart-wrapper">
-          <div class="chart-stage">
-            <div>
-              <canvas id="linhasPico" width="300" height="100"></canvas>
+      </div>
+      <br />
+      <br />
+      <div>
+        <div class="container grid">
+          <div class="hero">
+            <div class="chart-wrapper">
+              <div class="chart-stage">
+                <div>
+                  <canvas id="nuinvest" width="300" height="100"></canvas>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      
-      <!-- <div class="chart-wrapper">
-        <div class="chart-title">Total de confirmados</div>
-        <div class="chart-stage">
-          <section class="itemkpi">
-            <h5 id="kpiconfirmed"></h5>
-          </section>
+      <br />
+      <br />
+      <div class="container grid">
+        <div class="hero">
+          <div class="chart-wrapper">
+            <div class="chart-stage">
+              <div>
+                <canvas id="rico" width="300" height="100"></canvas>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="chart-wrapper">
-        <div class="chart-title">Total de mortes</div>
-        <div class="chart-stage">
-          <section class="itemkpi">
-            <h5 id="kpideaths"></h5>
-          </section>
+      <br />
+      <br />
+      <div class="container grid">
+        <div class="hero">
+          <div class="chart-wrapper">
+            <div class="chart-stage">
+              <div>
+                <canvas id="vitreo" width="300" height="100"></canvas>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="chart-wrapper">
-        <div class="chart-title">Total de Recuperados</div>
-        <div class="chart-stage">
-          <section class="itemkpi">
-            <h5 id="kpirecovered"></h5>
-          </section>
+      <br />
+      <br />
+      <div class="container grid">
+        <div class="hero">
+          <div class="chart-wrapper">
+            <div class="chart-stage">
+              <div>
+                <canvas id="geral" width="300" height="100"></canvas>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div> -->
+      <br />
+      <br />
+      <div class="container grid">
+        <div class="hero">
+          <div class="chart-wrapper">
+            <div class="chart-stage">
+              <div>
+                <canvas id="genial" width="300" height="100"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="container grid">
+        <div class="hero">
+          <div class="chart-wrapper">
+            <div class="chart-stage">
+              <div>
+                <canvas id="warren" width="300" height="100"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="container grid">
+        <div class="hero">
+          <div class="chart-wrapper">
+            <div class="chart-stage">
+              <div>
+                <canvas id="toro" width="300" height="100"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Project Analytics -->
     <script src="/assets/js/hb.js"></script>
